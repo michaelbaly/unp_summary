@@ -54,7 +54,6 @@ Returns: depends on cmd if OK, -1 on error
 * + 2 join the expected flag
 ```
 int     flags;
-
      /* Set a socket as nonblocking */
 if  ( (flags = fcntl (fd, F_GETFL, 0)) < 0)
     err_sys("F_GETFL error");
