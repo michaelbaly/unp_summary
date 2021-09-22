@@ -20,3 +20,10 @@
 * in this scenario, client's IP address, as chosen by kernel based on outgoing datalink, would changed for every datagram.
 * Q: what happens IF client binds an IP addr, but kernel decides that an outgoing datagram must be sent out some other datalink ?
 * A: IP datagram will **contain a source IP address** that is different from the IP address of the outgoing datalink
+
+![](connected_udp.png)
+
+* different with unconnect UDP in three ways:
+*  + 1 send data: use send/write instead of sendto
+*  + 2 recv data: use recv/read  instead of recvfrom
+*  + 3 ASNY errors are returned to the process if connected
