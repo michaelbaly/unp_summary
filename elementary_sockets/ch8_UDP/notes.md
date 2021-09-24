@@ -27,3 +27,12 @@
 *  + 1 send data: use send/write instead of sendto
 *  + 2 recv data: use recv/read  instead of recvfrom
 *  + 3 ASNY errors are returned to the process if connected
+
+##### 8.13 Lack of flow control with UDP
+
+* packet count on server equals received datagrams plus dropped count due to full socket buffers
+* server's receive buff can be set with **SO_RCVBUF** option, but only performs slightly better compared to dgecholoop1.c
+
+##### 8.14 Determining outgoing IF with UDP
+
+* see udpcli09.c, each time we issue a connect operation, we get different outgoing IF with getsockname function
