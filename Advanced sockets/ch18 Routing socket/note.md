@@ -25,7 +25,7 @@
   };
 ```
 * To aquire dl address --- to say, MAC address
-   * `#define LLADDR(s) ((caddr_t)((s)->sdl_data + (s)->sdl_nlen))`
+* `#define LLADDR(s) ((caddr_t)((s)->sdl_data + (s)->sdl_nlen))`
 
 ###### 18.3 Reading & Writing
 
@@ -43,4 +43,5 @@
 
 ###### 18.5 get_ifi_info FUNCTION (revisited)
 
+###### 18.6 IF
 * RFC 3493 defines four fucntions **deal with interface names and indexes**
