@@ -95,3 +95,17 @@ handler(void* arg)
          /* use values pointed to by ptr */
      }
   ```
+
+###### 26.6 web client and simultaneous connections
+
+* use thread for each connection
+* thread info are embedded in `file` structure
+  ```
+   struct file {
+        char   *f_name;               /* filename */
+        char   *f_host;               /* hostname or IP address */
+        int     f_fd;                 /* descriptor */
+        int     f_flags;              /* F_xxx below */
+        pthread_t f_tid;              /* thread ID */
+   } file [MAXFILES];
+  ```
